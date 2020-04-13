@@ -1,0 +1,27 @@
+{
+  "nghienCuuKhoaHocApp": {
+    "coquanphoihop": {
+      "home": {
+        "title": "Coquanphoihops",
+        "createLabel": "Thêm mới một Coquanphoihop",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Coquanphoihop",
+        "notFound": "No Coquanphoihops found"
+      },
+      "created": "Một Coquanphoihop mới được tạo với định danh {{ param }}",
+      "updated": "Một Coquanphoihop cập nhật với định danh {{ param }}",
+      "deleted": "Một Coquanphoihop đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Coquanphoihop {{ id }}?"
+      },
+      "detail": {
+        "title": "Coquanphoihop"
+      },
+      "macoquan": "Macoquan",
+      "tencoquan": "Tencoquan",
+      "noidung": "Noidung",
+      "tendaidien": "Tendaidien",
+      "sudung": "Sudung",
+      "coquanphoihopthamgia": "Coquanphoihopthamgia"
+    }
+  }
+}

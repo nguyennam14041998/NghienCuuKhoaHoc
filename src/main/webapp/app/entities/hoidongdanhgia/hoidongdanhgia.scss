@@ -1,0 +1,36 @@
+.modal-hoidongdanhgia {
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 5%;
+  font-size: 12px;
+  height: auto;
+  position: relative;
+  border: 1px solid rgb(161, 155, 155);
+  background-color: white;
+}
+.themtv {
+  position: relative;
+}
+.btn-themtv {
+  position: absolute;
+  top: 43%;
+}
+.table-thanhvien {
+  position: relative;
+}
+.table-thanhvien table tr th {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.table-thanhvien table tr td {
+  padding: 6px 0px 6px 10px;
+}
+.table-thanhvien-scroll {
+  height: 200px;
+  overflow: auto;
+  margin-top: 20px;
+}
+.xoa-tv {
+  color: red;
+  cursor: pointer;
+}

@@ -1,0 +1,24 @@
+{
+  "nghienCuuKhoaHocApp": {
+    "chunhiem": {
+      "home": {
+        "title": "Chunhiems",
+        "createLabel": "Thêm mới một Chunhiem",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Chunhiem",
+        "notFound": "No Chunhiems found"
+      },
+      "created": "Một Chunhiem mới được tạo với định danh {{ param }}",
+      "updated": "Một Chunhiem cập nhật với định danh {{ param }}",
+      "deleted": "Một Chunhiem đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Chunhiem {{ id }}?"
+      },
+      "detail": {
+        "title": "Chunhiem"
+      },
+      "sudung": "Sudung",
+      "detai": "Detai",
+      "nhansu": "Nhansu"
+    }
+  }
+}

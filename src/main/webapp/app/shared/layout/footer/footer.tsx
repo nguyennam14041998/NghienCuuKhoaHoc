@@ -1,19 +1,35 @@
 import './footer.scss';
-
+import { connect } from 'react-redux';
 import React from 'react';
-import { Translate } from 'react-jhipster';
-import { Col, Row } from 'reactstrap';
+export type IFooterProp = StateProps;
+export const Footer = (props: IFooterProp) => {
+const { account } = props;
+return(
+  <div>
+  {account && account.login ? (
+    <footer className="footer-web-hist">
+      <div className="container">
+        <div className="row content-footer">
+          <div className="col-xs-5 ">
+            <div>
+            Người dùng: {account.login}
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    ) : (
+    <div>
 
-const Footer = props => (
-  <div className="footer page-content">
-    <Row>
-      <Col md="12">
-        <p>
-          <Translate contentKey="footer">Your footer</Translate>
-        </p>
-      </Col>
-    </Row>
+    </div>
+  )}
+
   </div>
-);
-
-export default Footer;
+)
+};
+const mapStateToProps = storeState => ({
+account: storeState.authentication.account,
+isAuthenticated: storeState.authentication.isAuthenticated
+});
+type StateProps = ReturnType<typeof mapStateToProps>;
+export default connect(mapStateToProps)(Footer);

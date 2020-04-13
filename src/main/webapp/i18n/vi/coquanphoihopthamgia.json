@@ -1,0 +1,24 @@
+{
+  "nghienCuuKhoaHocApp": {
+    "coquanphoihopthamgia": {
+      "home": {
+        "title": "Coquanphoihopthamgias",
+        "createLabel": "Thêm mới một Coquanphoihopthamgia",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Coquanphoihopthamgia",
+        "notFound": "No Coquanphoihopthamgias found"
+      },
+      "created": "Một Coquanphoihopthamgia mới được tạo với định danh {{ param }}",
+      "updated": "Một Coquanphoihopthamgia cập nhật với định danh {{ param }}",
+      "deleted": "Một Coquanphoihopthamgia đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Coquanphoihopthamgia {{ id }}?"
+      },
+      "detail": {
+        "title": "Coquanphoihopthamgia"
+      },
+      "sudung": "Sudung",
+      "detai": "Detai",
+      "coquanphoihop": "Coquanphoihop"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "nghienCuuKhoaHocApp": {
+    "dutoanKP": {
+      "home": {
+        "title": "Dutoan KPS",
+        "createLabel": "Thêm mới một Dutoan KP",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Dutoan KP",
+        "notFound": "No Dutoan KPS found"
+      },
+      "created": "Một Dutoan KP mới được tạo với định danh {{ param }}",
+      "updated": "Một Dutoan KP cập nhật với định danh {{ param }}",
+      "deleted": "Một Dutoan KP đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Dutoan KP {{ id }}?"
+      },
+      "detail": {
+        "title": "Dutoan KP"
+      },
+      "madutoan": "Madutoan",
+      "tendutoan": "Tendutoan",
+      "noidung": "Noidung",
+      "sudung": "Sudung",
+      "dutoanKPCT": "Dutoan KPCT",
+      "detai": "Detai"
+    }
+  }
+}

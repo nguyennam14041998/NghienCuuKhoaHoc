@@ -1,0 +1,28 @@
+{
+  "nghienCuuKhoaHocApp": {
+    "danhgia": {
+      "home": {
+        "title": "Danhgias",
+        "createLabel": "Thêm mới một Danhgia",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danhgia",
+        "notFound": "No Danhgias found"
+      },
+      "created": "Một Danhgia mới được tạo với định danh {{ param }}",
+      "updated": "Một Danhgia cập nhật với định danh {{ param }}",
+      "deleted": "Một Danhgia đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danhgia {{ id }}?"
+      },
+      "detail": {
+        "title": "Danhgia"
+      },
+      "ma": "Ma",
+      "ten": "Ten",
+      "diem": "Diem",
+      "noidung": "Noidung",
+      "sudung": "Sudung",
+      "danhgiaCT": "Danhgia CT",
+      "detai": "Detai"
+    }
+  }
+}

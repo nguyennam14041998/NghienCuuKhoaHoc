@@ -143,7 +143,6 @@ relationship OneToMany{
         Hocham to Nhansu,
         Linhvuc to Detai,
         Capdetai to Detai,
-        Detai to DutoanKP,
         DutoanKP to DutoanKPCT,
         NoidungDT to DutoanKPCT,
         Detai to Tiendo,
@@ -166,6 +165,7 @@ relationship OneToMany{
 
 
 relationship OneToOne{
+	 Detai to DutoanKP,
 	Detai to Danhgia
 }
 dto all with mapstruct

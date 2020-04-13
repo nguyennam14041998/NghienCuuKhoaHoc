@@ -1,0 +1,25 @@
+{
+  "nghienCuuKhoaHocApp": {
+    "chucdanh": {
+      "home": {
+        "title": "Chucdanhs",
+        "createLabel": "Thêm mới một Chucdanh",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Chucdanh",
+        "notFound": "No Chucdanhs found"
+      },
+      "created": "Một Chucdanh mới được tạo với định danh {{ param }}",
+      "updated": "Một Chucdanh cập nhật với định danh {{ param }}",
+      "deleted": "Một Chucdanh đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Chucdanh {{ id }}?"
+      },
+      "detail": {
+        "title": "Chucdanh"
+      },
+      "machucdanh": "Machucdanh",
+      "tenchucdanh": "Tenchucdanh",
+      "sudung": "Sudung",
+      "nhansu": "Nhansu"
+    }
+  }
+}

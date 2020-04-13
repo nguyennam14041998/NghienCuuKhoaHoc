@@ -1,0 +1,28 @@
+{
+  "nghienCuuKhoaHocApp": {
+    "donvi": {
+      "home": {
+        "title": "Donvis",
+        "createLabel": "Thêm mới một Donvi",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Donvi",
+        "notFound": "No Donvis found"
+      },
+      "created": "Một Donvi mới được tạo với định danh {{ param }}",
+      "updated": "Một Donvi cập nhật với định danh {{ param }}",
+      "deleted": "Một Donvi đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Donvi {{ id }}?"
+      },
+      "detail": {
+        "title": "Donvi"
+      },
+      "madv": "Madv",
+      "tendv": "Tendv",
+      "dienthoai": "Dienthoai",
+      "fax": "Fax",
+      "email": "Email",
+      "sudung": "Sudung",
+      "nhansu": "Nhansu"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "nghienCuuKhoaHocApp": {
+    "thanhvienHD": {
+      "home": {
+        "title": "Thanhvien HDS",
+        "createLabel": "Thêm mới một Thanhvien HD",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Thanhvien HD",
+        "notFound": "No Thanhvien HDS found"
+      },
+      "created": "Một Thanhvien HD mới được tạo với định danh {{ param }}",
+      "updated": "Một Thanhvien HD cập nhật với định danh {{ param }}",
+      "deleted": "Một Thanhvien HD đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Thanhvien HD {{ id }}?"
+      },
+      "detail": {
+        "title": "Thanhvien HD"
+      },
+      "ten": "Ten",
+      "donvi": "Donvi",
+      "trachnhiem": "Trachnhiem",
+      "sudung": "Sudung",
+      "hoidongdanhgia": "Hoidongdanhgia"
+    }
+  }
+}

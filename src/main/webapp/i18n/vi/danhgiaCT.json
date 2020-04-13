@@ -1,0 +1,25 @@
+{
+  "nghienCuuKhoaHocApp": {
+    "danhgiaCT": {
+      "home": {
+        "title": "Danhgia CTS",
+        "createLabel": "Thêm mới một Danhgia CT",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danhgia CT",
+        "notFound": "No Danhgia CTS found"
+      },
+      "created": "Một Danhgia CT mới được tạo với định danh {{ param }}",
+      "updated": "Một Danhgia CT cập nhật với định danh {{ param }}",
+      "deleted": "Một Danhgia CT đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danhgia CT {{ id }}?"
+      },
+      "detail": {
+        "title": "Danhgia CT"
+      },
+      "diem": "Diem",
+      "sudung": "Sudung",
+      "danhgia": "Danhgia",
+      "noidungdanhgia": "Noidungdanhgia"
+    }
+  }
+}

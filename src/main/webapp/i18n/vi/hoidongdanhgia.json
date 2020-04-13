@@ -1,0 +1,26 @@
+{
+  "nghienCuuKhoaHocApp": {
+    "hoidongdanhgia": {
+      "home": {
+        "title": "Hoidongdanhgias",
+        "createLabel": "Thêm mới một Hoidongdanhgia",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Hoidongdanhgia",
+        "notFound": "No Hoidongdanhgias found"
+      },
+      "created": "Một Hoidongdanhgia mới được tạo với định danh {{ param }}",
+      "updated": "Một Hoidongdanhgia cập nhật với định danh {{ param }}",
+      "deleted": "Một Hoidongdanhgia đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Hoidongdanhgia {{ id }}?"
+      },
+      "detail": {
+        "title": "Hoidongdanhgia"
+      },
+      "mahoidong": "Mahoidong",
+      "tenhoidong": "Tenhoidong",
+      "sudung": "Sudung",
+      "detai": "Detai",
+      "thanhvienHD": "Thanhvien HD"
+    }
+  }
+}

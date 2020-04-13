@@ -1,0 +1,93 @@
+.card-quanlydulieu {
+  font-size: 12px;
+  font-family: Arial;
+  border-radius: 0px !important;
+  border: 0px;
+}
+.card-header-quanlydulieu {
+  border-bottom: 0px !important;
+}
+.card-body-quanlydulieu input {
+  font-size: 12px;
+}
+.card-quanlydulieu button {
+  font-size: 12px;
+}
+.title-quanlydulieu {
+  font-weight: bold;
+}
+.btn-sua {
+  width: 100%;
+  padding: 8px 2px 8px 10px;
+  border-radius: 0px;
+  font-size: 12px;
+  text-align: left;
+  background-color: white;
+  border: 0px;
+}
+.table-button-active {
+  width: 100%;
+}
+.btn-sua:hover {
+  background-color: rgb(223, 213, 213);
+}
+.table-button-active tr td {
+  padding: 0px 0px 0px 0px !important;
+  border: 0px !important;
+}
+.fa-cog {
+  cursor: pointer;
+}
+.modal-quanlydulieu {
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 5%;
+  font-size: 12px;
+  height: auto;
+  position: relative;
+  border: 1px solid rgb(161, 155, 155);
+  background-color: white;
+}
+.modal-quanlydulieu input {
+  font-size: 12px;
+}
+.card-body select {
+  font-size: 12px;
+}
+.card-modal-quanlydulieu {
+  border-radius: 0px !important;
+}
+.card-header-modal-quanlydulieu {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+  background-color: #004f9e;
+}
+.card-header-modal-quanlydulieu span {
+  color: white;
+}
+.card-header-modal-quanlydulieu button {
+  position: absolute;
+  right: 1%;
+  top: 10%;
+  padding: 0px 5px 0px 5px;
+  font-size: 14px;
+  background-color: #004f9e;
+  border: 0px;
+  color: white;
+}
+.card-footer-modal-quanlydulieu button {
+  font-size: 12px;
+  width: 45%;
+  margin-left: 5%;
+}
+.card-body-modal-quanlydulieu button {
+  font-size: 12px;
+}
+.btn-default {
+  background-color: white;
+  border: 1px solid rgb(141, 140, 138);
+}
+.btn-default:hover {
+  background-color: #e9c8c8;
+}

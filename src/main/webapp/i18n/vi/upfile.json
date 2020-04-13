@@ -1,0 +1,26 @@
+{
+  "nghienCuuKhoaHocApp": {
+    "upfile": {
+      "home": {
+        "title": "Upfiles",
+        "createLabel": "Thêm mới một Upfile",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Upfile",
+        "notFound": "No Upfiles found"
+      },
+      "created": "Một Upfile mới được tạo với định danh {{ param }}",
+      "updated": "Một Upfile cập nhật với định danh {{ param }}",
+      "deleted": "Một Upfile đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Upfile {{ id }}?"
+      },
+      "detail": {
+        "title": "Upfile"
+      },
+      "mota": "Mota",
+      "noidung": "Noidung",
+      "thoigian": "Thoigian",
+      "detai": "Detai",
+      "tiendo": "Tiendo"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "nghienCuuKhoaHocApp": {
+    "nguonkinhphi": {
+      "home": {
+        "title": "Nguonkinhphis",
+        "createLabel": "Thêm mới một Nguonkinhphi",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Nguonkinhphi",
+        "notFound": "No Nguonkinhphis found"
+      },
+      "created": "Một Nguonkinhphi mới được tạo với định danh {{ param }}",
+      "updated": "Một Nguonkinhphi cập nhật với định danh {{ param }}",
+      "deleted": "Một Nguonkinhphi đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Nguonkinhphi {{ id }}?"
+      },
+      "detail": {
+        "title": "Nguonkinhphi"
+      },
+      "manguonkinhphi": "Manguonkinhphi",
+      "tennguonkinhphi": "Tennguonkinhphi",
+      "noidung": "Noidung",
+      "sotiencap": "Sotiencap",
+      "sudung": "Sudung",
+      "detai": "Detai"
+    }
+  }
+}

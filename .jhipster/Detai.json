@@ -1,0 +1,139 @@
+{
+    "name": "Detai",
+    "fields": [
+        {
+            "fieldName": "ma",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ten",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "thoigiantao",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "thoigianbatdau",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "thoigianketthuc",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "muctieu",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "noidung",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tinhcapthiet",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "ketqua",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "xeploai",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "trangthai",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "dutoanKP",
+            "otherEntityRelationshipName": "detai",
+            "relationshipName": "dutoanKP",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "danhgia",
+            "otherEntityRelationshipName": "detai",
+            "relationshipName": "danhgia",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "tiendo",
+            "otherEntityRelationshipName": "detai",
+            "relationshipName": "tiendo"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "upfile",
+            "otherEntityRelationshipName": "detai",
+            "relationshipName": "upfile"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "nhansuthamgia",
+            "otherEntityRelationshipName": "detai",
+            "relationshipName": "nhansuthamgia"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "nguonkinhphi",
+            "otherEntityRelationshipName": "detai",
+            "relationshipName": "nguonkinhphi"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "coquanphoihopthamgia",
+            "otherEntityRelationshipName": "detai",
+            "relationshipName": "coquanphoihopthamgia"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "linhvuc",
+            "otherEntityRelationshipName": "detai",
+            "relationshipName": "linhvuc",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "capdetai",
+            "otherEntityRelationshipName": "detai",
+            "relationshipName": "capdetai",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "hoidongdanhgia",
+            "otherEntityRelationshipName": "detai",
+            "relationshipName": "hoidongdanhgia",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "chunhiem",
+            "otherEntityRelationshipName": "detai",
+            "relationshipName": "chunhiem",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200409100058",
+    "entityTableName": "detai",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

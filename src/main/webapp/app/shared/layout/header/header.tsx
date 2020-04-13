@@ -9,7 +9,7 @@ import { NavLink as Link } from 'react-router-dom';
 import LoadingBar from 'react-redux-loading-bar';
 
 import { Home, Brand } from './header-components';
-import { AdminMenu, EntitiesMenu, AccountMenu, LocaleMenu } from '../menus';
+import { AdminMenu,QLdulieu,QLDeTai, QLKinhPhi,QLHoiDong , AccountMenu, LocaleMenu } from '../menus';
 
 export interface IHeaderProps {
   isAuthenticated: boolean;
@@ -33,9 +33,7 @@ const Header = (props: IHeaderProps) => {
   const renderDevRibbon = () =>
     props.isInProduction === false ? (
       <div className="ribbon dev">
-        <a href="">
-          <Translate contentKey={`global.ribbon.${props.ribbonEnv}`} />
-        </a>
+        
       </div>
     ) : null;
 
@@ -53,7 +51,10 @@ const Header = (props: IHeaderProps) => {
         <Collapse isOpen={menuOpen} navbar>
           <Nav id="header-tabs" className="ml-auto" navbar>
             <Home />
-            {props.isAuthenticated && <EntitiesMenu />}
+            {props.isAuthenticated && <QLdulieu />}
+            {props.isAuthenticated && <QLDeTai />}
+            {props.isAuthenticated && <QLKinhPhi />}
+            {props.isAuthenticated && <QLHoiDong />}
             {props.isAuthenticated && props.isAdmin && (
               <AdminMenu showSwagger={props.isSwaggerEnabled} showDatabase={!props.isInProduction} />
             )}

@@ -1,0 +1,27 @@
+{
+  "nghienCuuKhoaHocApp": {
+    "dutoanKPCT": {
+      "home": {
+        "title": "Dutoan KPCTS",
+        "createLabel": "Thêm mới một Dutoan KPCT",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Dutoan KPCT",
+        "notFound": "No Dutoan KPCTS found"
+      },
+      "created": "Một Dutoan KPCT mới được tạo với định danh {{ param }}",
+      "updated": "Một Dutoan KPCT cập nhật với định danh {{ param }}",
+      "deleted": "Một Dutoan KPCT đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Dutoan KPCT {{ id }}?"
+      },
+      "detail": {
+        "title": "Dutoan KPCT"
+      },
+      "soluong": "Soluong",
+      "mucchi": "Mucchi",
+      "tong": "Tong",
+      "sudung": "Sudung",
+      "dutoanKP": "Dutoan KP",
+      "noidungDT": "Noidung DT"
+    }
+  }
+}

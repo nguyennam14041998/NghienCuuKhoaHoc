@@ -1,3 +1,54 @@
-.footer {
-  height: 50px;
+.footer-web-hist {
+  width: 100%;
+  background: darkblue;
+  padding: 0px;
+  color: #fff;
+  clear: both;
+  height: 35px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  float: left;
+  display: block;
+}
+.content-footer {
+  margin-top: 10px;
+}
+.content-ft {
+  margin-left: -100px;
+  width: 32% !important;
+  padding-right: 0;
+}
+.content-ft,
+.content-ft label,
+.content-ft-ct,
+.content-ft-ct label {
+  font-size: 13px;
+}
+.content-ft label,
+.content-ft-ct label {
+  margin-bottom: 0px;
+  font-weight: 500;
+  color: #00ff00 !important;
+}
+.content-ft-ct {
+  width: 54% !important;
+  padding: 0 !important;
+}
+.sp-f2 {
+  width: 15% !important;
+  padding: 0 !important;
+  font-size: 13px;
+}
+.col-xs-2.thongbao {
+  width: 6% !important;
+  padding: 0;
+}
+.col-xs-2.thongbao {
+  font-size: 13px;
+  color: yellow;
+}
+.col-xs-2.thongbao a:hover {
+  text-decoration: none;
 }

@@ -1,0 +1,31 @@
+{
+  "nghienCuuKhoaHocApp": {
+    "tiendo": {
+      "home": {
+        "title": "Tiendos",
+        "createLabel": "Thêm mới một Tiendo",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Tiendo",
+        "notFound": "No Tiendos found"
+      },
+      "created": "Một Tiendo mới được tạo với định danh {{ param }}",
+      "updated": "Một Tiendo cập nhật với định danh {{ param }}",
+      "deleted": "Một Tiendo đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Tiendo {{ id }}?"
+      },
+      "detail": {
+        "title": "Tiendo"
+      },
+      "matiendo": "Matiendo",
+      "kybaocao": "Kybaocao",
+      "noidung": "Noidung",
+      "thoigianbatdau": "Thoigianbatdau",
+      "thoigianketthuc": "Thoigianketthuc",
+      "khoiluonghoanthanh": "Khoiluonghoanthanh",
+      "ghichu": "Ghichu",
+      "sudung": "Sudung",
+      "upfile": "Upfile",
+      "detai": "Detai"
+    }
+  }
+}

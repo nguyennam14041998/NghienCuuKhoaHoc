@@ -1,0 +1,25 @@
+{
+  "nghienCuuKhoaHocApp": {
+    "linhvuc": {
+      "home": {
+        "title": "Linhvucs",
+        "createLabel": "Thêm mới một Linhvuc",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Linhvuc",
+        "notFound": "No Linhvucs found"
+      },
+      "created": "Một Linhvuc mới được tạo với định danh {{ param }}",
+      "updated": "Một Linhvuc cập nhật với định danh {{ param }}",
+      "deleted": "Một Linhvuc đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Linhvuc {{ id }}?"
+      },
+      "detail": {
+        "title": "Linhvuc"
+      },
+      "malv": "Malv",
+      "tenlv": "Tenlv",
+      "sudung": "Sudung",
+      "detai": "Detai"
+    }
+  }
+}
