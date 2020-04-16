@@ -100,6 +100,10 @@ import thanhvienHD, {
 import upfile, {
   UpfileState
 } from 'app/entities/upfile/upfile.reducer';
+// prettier-ignore
+import danhsachbaibao, {
+  DanhsachbaibaoState
+} from 'app/entities/danhsachbaibao/danhsachbaibao.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -135,6 +139,7 @@ export interface IRootState {
   readonly hoidongdanhgia: HoidongdanhgiaState;
   readonly thanhvienHD: ThanhvienHDState;
   readonly upfile: UpfileState;
+  readonly danhsachbaibao: DanhsachbaibaoState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -172,6 +177,7 @@ const rootReducer = combineReducers<IRootState>({
   hoidongdanhgia,
   thanhvienHD,
   upfile,
+  danhsachbaibao,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });

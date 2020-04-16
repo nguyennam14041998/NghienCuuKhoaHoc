@@ -127,6 +127,9 @@ public class DetaiQueryService extends QueryService<Detai> {
             if (criteria.getSudung() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getSudung(), Detai_.sudung));
             }
+            if (criteria.getChunhiemdetai() != null) {
+                specification = specification.and(buildStringSpecification(criteria.getChunhiemdetai(), Detai_.chunhiemdetai));
+            }
             if (criteria.getDutoanKPId() != null) {
                 specification = specification.and(buildSpecification(criteria.getDutoanKPId(),
                     root -> root.join(Detai_.dutoanKP, JoinType.LEFT).get(DutoanKP_.id)));
@@ -134,6 +137,10 @@ public class DetaiQueryService extends QueryService<Detai> {
             if (criteria.getDanhgiaId() != null) {
                 specification = specification.and(buildSpecification(criteria.getDanhgiaId(),
                     root -> root.join(Detai_.danhgia, JoinType.LEFT).get(Danhgia_.id)));
+            }
+            if (criteria.getDanhsachbaibaoId() != null) {
+                specification = specification.and(buildSpecification(criteria.getDanhsachbaibaoId(),
+                    root -> root.join(Detai_.danhsachbaibao, JoinType.LEFT).get(Danhsachbaibao_.id)));
             }
             if (criteria.getTiendoId() != null) {
                 specification = specification.and(buildSpecification(criteria.getTiendoId(),

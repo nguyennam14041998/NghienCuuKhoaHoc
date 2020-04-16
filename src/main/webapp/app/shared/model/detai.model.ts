@@ -19,8 +19,10 @@ export interface IDetai {
   xeploai?: number;
   trangthai?: number;
   sudung?: number;
+  chunhiemdetai?: string;
   dutoanKPId?: number;
   danhgiaId?: number;
+  danhsachbaibaoId?: number;
   tiendos?: ITiendo[];
   upfiles?: IUpfile[];
   nhansuthamgias?: INhansuthamgia[];
@@ -30,6 +32,15 @@ export interface IDetai {
   capdetaiId?: number;
   hoidongdanhgiaId?: number;
   chunhiemId?: number;
+
+  itemsPerPage?: number;
+  sort?: string;
+  order?: string;
+  activePage?: number;
+  ModalAdd?: boolean;
+  ModalNguonkinhphi?: boolean;
+  ModalDutoan?: boolean;
 }
 
 export const defaultValue: Readonly<IDetai> = {};
+export declare const getSortState: (location: any, itemsPerPage: any) => IDetai;

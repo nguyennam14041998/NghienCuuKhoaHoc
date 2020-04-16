@@ -51,9 +51,13 @@ public class DetaiCriteria implements Serializable, Criteria {
 
     private IntegerFilter sudung;
 
+    private StringFilter chunhiemdetai;
+
     private LongFilter dutoanKPId;
 
     private LongFilter danhgiaId;
+
+    private LongFilter danhsachbaibaoId;
 
     private LongFilter tiendoId;
 
@@ -90,8 +94,10 @@ public class DetaiCriteria implements Serializable, Criteria {
         this.xeploai = other.xeploai == null ? null : other.xeploai.copy();
         this.trangthai = other.trangthai == null ? null : other.trangthai.copy();
         this.sudung = other.sudung == null ? null : other.sudung.copy();
+        this.chunhiemdetai = other.chunhiemdetai == null ? null : other.chunhiemdetai.copy();
         this.dutoanKPId = other.dutoanKPId == null ? null : other.dutoanKPId.copy();
         this.danhgiaId = other.danhgiaId == null ? null : other.danhgiaId.copy();
+        this.danhsachbaibaoId = other.danhsachbaibaoId == null ? null : other.danhsachbaibaoId.copy();
         this.tiendoId = other.tiendoId == null ? null : other.tiendoId.copy();
         this.upfileId = other.upfileId == null ? null : other.upfileId.copy();
         this.nhansuthamgiaId = other.nhansuthamgiaId == null ? null : other.nhansuthamgiaId.copy();
@@ -212,6 +218,14 @@ public class DetaiCriteria implements Serializable, Criteria {
         this.sudung = sudung;
     }
 
+    public StringFilter getChunhiemdetai() {
+        return chunhiemdetai;
+    }
+
+    public void setChunhiemdetai(StringFilter chunhiemdetai) {
+        this.chunhiemdetai = chunhiemdetai;
+    }
+
     public LongFilter getDutoanKPId() {
         return dutoanKPId;
     }
@@ -226,6 +240,14 @@ public class DetaiCriteria implements Serializable, Criteria {
 
     public void setDanhgiaId(LongFilter danhgiaId) {
         this.danhgiaId = danhgiaId;
+    }
+
+    public LongFilter getDanhsachbaibaoId() {
+        return danhsachbaibaoId;
+    }
+
+    public void setDanhsachbaibaoId(LongFilter danhsachbaibaoId) {
+        this.danhsachbaibaoId = danhsachbaibaoId;
     }
 
     public LongFilter getTiendoId() {
@@ -324,8 +346,10 @@ public class DetaiCriteria implements Serializable, Criteria {
             Objects.equals(xeploai, that.xeploai) &&
             Objects.equals(trangthai, that.trangthai) &&
             Objects.equals(sudung, that.sudung) &&
+            Objects.equals(chunhiemdetai, that.chunhiemdetai) &&
             Objects.equals(dutoanKPId, that.dutoanKPId) &&
             Objects.equals(danhgiaId, that.danhgiaId) &&
+            Objects.equals(danhsachbaibaoId, that.danhsachbaibaoId) &&
             Objects.equals(tiendoId, that.tiendoId) &&
             Objects.equals(upfileId, that.upfileId) &&
             Objects.equals(nhansuthamgiaId, that.nhansuthamgiaId) &&
@@ -353,8 +377,10 @@ public class DetaiCriteria implements Serializable, Criteria {
         xeploai,
         trangthai,
         sudung,
+        chunhiemdetai,
         dutoanKPId,
         danhgiaId,
+        danhsachbaibaoId,
         tiendoId,
         upfileId,
         nhansuthamgiaId,
@@ -383,8 +409,10 @@ public class DetaiCriteria implements Serializable, Criteria {
                 (xeploai != null ? "xeploai=" + xeploai + ", " : "") +
                 (trangthai != null ? "trangthai=" + trangthai + ", " : "") +
                 (sudung != null ? "sudung=" + sudung + ", " : "") +
+                (chunhiemdetai != null ? "chunhiemdetai=" + chunhiemdetai + ", " : "") +
                 (dutoanKPId != null ? "dutoanKPId=" + dutoanKPId + ", " : "") +
                 (danhgiaId != null ? "danhgiaId=" + danhgiaId + ", " : "") +
+                (danhsachbaibaoId != null ? "danhsachbaibaoId=" + danhsachbaibaoId + ", " : "") +
                 (tiendoId != null ? "tiendoId=" + tiendoId + ", " : "") +
                 (upfileId != null ? "upfileId=" + upfileId + ", " : "") +
                 (nhansuthamgiaId != null ? "nhansuthamgiaId=" + nhansuthamgiaId + ", " : "") +

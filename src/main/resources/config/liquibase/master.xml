@@ -36,6 +36,7 @@
     <include file="config/liquibase/changelog/20200409100106_added_entity_Hoidongdanhgia.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200409100107_added_entity_ThanhvienHD.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200409100108_added_entity_Upfile.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200413080314_added_entity_Danhsachbaibao.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20200409100052_added_entity_constraints_Nhansu.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200409100053_added_entity_constraints_Nhansuthamgia.xml" relativeToChangelogFile="false"/>

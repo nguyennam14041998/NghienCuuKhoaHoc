@@ -48,6 +48,10 @@
         {
             "fieldName": "sudung",
             "fieldType": "Integer"
+        },
+        {
+            "fieldName": "chunhiemdetai",
+            "fieldType": "String"
         }
     ],
     "relationships": [
@@ -64,6 +68,14 @@
             "otherEntityName": "danhgia",
             "otherEntityRelationshipName": "detai",
             "relationshipName": "danhgia",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "danhsachbaibao",
+            "otherEntityRelationshipName": "detai",
+            "relationshipName": "danhsachbaibao",
             "otherEntityField": "id",
             "ownerSide": true
         },

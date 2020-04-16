@@ -32,7 +32,12 @@ export const QLdulieu = props => (
     <MenuItem icon="asterisk" to="/coquanphoihop">
       Cơ quan phối hợp
     </MenuItem>
-
+    <MenuItem icon="asterisk" to="/noidung-dt">
+      Nội dung dự toán
+    </MenuItem>
+    <MenuItem icon="asterisk" to="/noidungdanhgia">
+      Nội dung đánh giá
+    </MenuItem>
     {/* jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here */}
   </NavDropdown>
 );
@@ -50,9 +55,7 @@ export const QLDeTai = props => (
     <MenuItem icon="asterisk" to="/danhgia-ct">
       Đánh giá chi tiết
     </MenuItem>
-    <MenuItem icon="asterisk" to="/noidungdanhgia">
-      Nội dung đánh giá
-    </MenuItem>
+    
     <MenuItem icon="asterisk" to="/upfile">
       <Translate contentKey="global.menu.entities.upfile" />
     </MenuItem>
@@ -62,11 +65,12 @@ export const QLDeTai = props => (
     <MenuItem icon="asterisk" to="/coquanphoihopthamgia">
       Cơ quan tham gia
     </MenuItem>
-    {/* jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here */}
-  </NavDropdown>
-);
-export const QLKinhPhi = props => (
-  <NavDropdown icon="th-list" name="Quản lý kinh phí" id="entity-menu">
+    <MenuItem icon="asterisk" to="/hoidongdanhgia">
+      Hội đồng đánh giá
+    </MenuItem>
+    <MenuItem icon="asterisk" to="/thanhvien-hd">
+      Thành viên hội đồng
+    </MenuItem>
     <MenuItem icon="asterisk" to="/nguonkinhphi">
       Nguồn kinh phí
     </MenuItem>
@@ -76,23 +80,17 @@ export const QLKinhPhi = props => (
     <MenuItem icon="asterisk" to="/dutoan-kpct">
       Dự toán kinh phí chi tiết
     </MenuItem>
-    <MenuItem icon="asterisk" to="/noidung-dt">
-      Nội dung dự toán
-    </MenuItem>
-
+    
     {/* jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here */}
   </NavDropdown>
 );
-export const QLHoiDong = props => (
-  <NavDropdown icon="th-list" name="Hội đồng thẩm định" id="entity-menu">
-    <MenuItem icon="asterisk" to="/hoidongdanhgia">
-      Hội đồng đánh giá
-    </MenuItem>
-    <MenuItem icon="asterisk" to="/thanhvien-hd">
-      Thành viên hội đồng
-    </MenuItem>
 
+export const QLHoiDong = props => (
+  <NavDropdown icon="th-list" name="Danh sách bài báo" id="entity-menu">
     
+    <MenuItem icon="asterisk" to="/danhsachbaibao">
+      Danh sách bài báo
+    </MenuItem>
     {/* jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here */}
   </NavDropdown>
 );

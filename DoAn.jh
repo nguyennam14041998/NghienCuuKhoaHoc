@@ -76,7 +76,8 @@ entity Detai{
         Ketqua String,
         Xeploai Integer,
         Trangthai Integer,
-        Sudung Integer
+        Sudung Integer,
+	Chunhiemdetai String
 }
 entity DutoanKP{
         Madutoan String,
@@ -137,6 +138,25 @@ entity Upfile{
 	Thoigian LocalDate,
 	
 }
+entity Danhsachbaibao{
+	Tenbaibao String,
+    Phanloai Integer,
+    Tenhoithao String,
+    Namxuatban Integer,
+    Thangxuatban Integer,
+    Danhmuc Integer,
+	Iffff String,
+    Hindex String,
+    Xeploai Integer,
+    Rankbaibao Integer,
+    Volbaibao String,
+    Sobaibao Integer,
+    Ppbaibao String,
+    Link String,
+    Ghichu String,
+    Tacgiachinh String,
+    Tacgiakhac String
+}
 relationship OneToMany{ 
 	Donvi to Nhansu,
         Chucdanh to Nhansu,
@@ -166,7 +186,8 @@ relationship OneToMany{
 
 relationship OneToOne{
 	 Detai to DutoanKP,
-	Detai to Danhgia
+	Detai to Danhgia,
+	Detai to Danhsachbaibao
 }
 dto all with mapstruct
 filter all

@@ -9,7 +9,7 @@ import { NavLink as Link } from 'react-router-dom';
 import LoadingBar from 'react-redux-loading-bar';
 
 import { Home, Brand } from './header-components';
-import { AdminMenu,QLdulieu,QLDeTai, QLKinhPhi,QLHoiDong , AccountMenu, LocaleMenu } from '../menus';
+import { AdminMenu,QLdulieu,QLDeTai,QLHoiDong , AccountMenu, LocaleMenu } from '../menus';
 
 export interface IHeaderProps {
   isAuthenticated: boolean;
@@ -53,7 +53,6 @@ const Header = (props: IHeaderProps) => {
             <Home />
             {props.isAuthenticated && <QLdulieu />}
             {props.isAuthenticated && <QLDeTai />}
-            {props.isAuthenticated && <QLKinhPhi />}
             {props.isAuthenticated && <QLHoiDong />}
             {props.isAuthenticated && props.isAdmin && (
               <AdminMenu showSwagger={props.isSwaggerEnabled} showDatabase={!props.isInProduction} />

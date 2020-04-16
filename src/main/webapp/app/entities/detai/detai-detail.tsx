@@ -105,6 +105,12 @@ export class DetaiDetail extends React.Component<IDetaiDetailProps> {
             </dt>
             <dd>{detaiEntity.sudung}</dd>
             <dt>
+              <span id="chunhiemdetai">
+                <Translate contentKey="nghienCuuKhoaHocApp.detai.chunhiemdetai">Chunhiemdetai</Translate>
+              </span>
+            </dt>
+            <dd>{detaiEntity.chunhiemdetai}</dd>
+            <dt>
               <Translate contentKey="nghienCuuKhoaHocApp.detai.dutoanKP">Dutoan KP</Translate>
             </dt>
             <dd>{detaiEntity.dutoanKPId ? detaiEntity.dutoanKPId : ''}</dd>
@@ -112,6 +118,10 @@ export class DetaiDetail extends React.Component<IDetaiDetailProps> {
               <Translate contentKey="nghienCuuKhoaHocApp.detai.danhgia">Danhgia</Translate>
             </dt>
             <dd>{detaiEntity.danhgiaId ? detaiEntity.danhgiaId : ''}</dd>
+            <dt>
+              <Translate contentKey="nghienCuuKhoaHocApp.detai.danhsachbaibao">Danhsachbaibao</Translate>
+            </dt>
+            <dd>{detaiEntity.danhsachbaibaoId ? detaiEntity.danhsachbaibaoId : ''}</dd>
             <dt>
               <Translate contentKey="nghienCuuKhoaHocApp.detai.linhvuc">Linhvuc</Translate>
             </dt>

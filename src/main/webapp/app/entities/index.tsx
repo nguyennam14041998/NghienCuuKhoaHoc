@@ -26,6 +26,7 @@ import Noidungdanhgia from './noidungdanhgia';
 import Hoidongdanhgia from './hoidongdanhgia';
 import ThanhvienHD from './thanhvien-hd';
 import Upfile from './upfile';
+import Danhsachbaibao from './danhsachbaibao';
 /* jhipster-needle-add-route-import - JHipster will add routes here */
 
 const Routes = ({ match }) => (
@@ -54,6 +55,7 @@ const Routes = ({ match }) => (
       <ErrorBoundaryRoute path={`${match.url}hoidongdanhgia`} component={Hoidongdanhgia} />
       <ErrorBoundaryRoute path={`${match.url}thanhvien-hd`} component={ThanhvienHD} />
       <ErrorBoundaryRoute path={`${match.url}upfile`} component={Upfile} />
+      <ErrorBoundaryRoute path={`${match.url}danhsachbaibao`} component={Danhsachbaibao} />
       {/* jhipster-needle-add-route-path - JHipster will add routes here */}
     </Switch>
   </div>

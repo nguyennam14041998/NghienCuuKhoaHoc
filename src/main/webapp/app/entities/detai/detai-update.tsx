@@ -11,6 +11,8 @@ import { IDutoanKP } from 'app/shared/model/dutoan-kp.model';
 import { getEntities as getDutoanKps } from 'app/entities/dutoan-kp/dutoan-kp.reducer';
 import { IDanhgia } from 'app/shared/model/danhgia.model';
 import { getEntities as getDanhgias } from 'app/entities/danhgia/danhgia.reducer';
+import { IDanhsachbaibao } from 'app/shared/model/danhsachbaibao.model';
+import { getEntities as getDanhsachbaibaos } from 'app/entities/danhsachbaibao/danhsachbaibao.reducer';
 import { ILinhvuc } from 'app/shared/model/linhvuc.model';
 import { getEntities as getLinhvucs } from 'app/entities/linhvuc/linhvuc.reducer';
 import { ICapdetai } from 'app/shared/model/capdetai.model';
@@ -30,6 +32,7 @@ export interface IDetaiUpdateState {
   isNew: boolean;
   dutoanKPId: string;
   danhgiaId: string;
+  danhsachbaibaoId: string;
   linhvucId: string;
   capdetaiId: string;
   hoidongdanhgiaId: string;
@@ -42,6 +45,7 @@ export class DetaiUpdate extends React.Component<IDetaiUpdateProps, IDetaiUpdate
     this.state = {
       dutoanKPId: '0',
       danhgiaId: '0',
+      danhsachbaibaoId: '0',
       linhvucId: '0',
       capdetaiId: '0',
       hoidongdanhgiaId: '0',
@@ -65,6 +69,7 @@ export class DetaiUpdate extends React.Component<IDetaiUpdateProps, IDetaiUpdate
 
     this.props.getDutoanKps();
     this.props.getDanhgias();
+    this.props.getDanhsachbaibaos();
     this.props.getLinhvucs();
     this.props.getCapdetais();
     this.props.getHoidongdanhgias();
@@ -92,7 +97,18 @@ export class DetaiUpdate extends React.Component<IDetaiUpdateProps, IDetaiUpdate
   };
 
   render() {
-    const { detaiEntity, dutoanKPS, danhgias, linhvucs, capdetais, hoidongdanhgias, chunhiems, loading, updating } = this.props;
+    const {
+      detaiEntity,
+      dutoanKPS,
+      danhgias,
+      danhsachbaibaos,
+      linhvucs,
+      capdetais,
+      hoidongdanhgias,
+      chunhiems,
+      loading,
+      updating
+    } = this.props;
     const { isNew } = this.state;
 
     return (
@@ -191,6 +207,12 @@ export class DetaiUpdate extends React.Component<IDetaiUpdateProps, IDetaiUpdate
                   <AvField id="detai-sudung" type="string" className="form-control" name="sudung" />
                 </AvGroup>
                 <AvGroup>
+                  <Label id="chunhiemdetaiLabel" for="detai-chunhiemdetai">
+                    <Translate contentKey="nghienCuuKhoaHocApp.detai.chunhiemdetai">Chunhiemdetai</Translate>
+                  </Label>
+                  <AvField id="detai-chunhiemdetai" type="text" name="chunhiemdetai" />
+                </AvGroup>
+                <AvGroup>
                   <Label for="detai-dutoanKP">
                     <Translate contentKey="nghienCuuKhoaHocApp.detai.dutoanKP">Dutoan KP</Translate>
                   </Label>
@@ -213,6 +235,21 @@ export class DetaiUpdate extends React.Component<IDetaiUpdateProps, IDetaiUpdate
                     <option value="" key="0" />
                     {danhgias
                       ? danhgias.map(otherEntity => (
+                          <option value={otherEntity.id} key={otherEntity.id}>
+                            {otherEntity.id}
+                          </option>
+                        ))
+                      : null}
+                  </AvInput>
+                </AvGroup>
+                <AvGroup>
+                  <Label for="detai-danhsachbaibao">
+                    <Translate contentKey="nghienCuuKhoaHocApp.detai.danhsachbaibao">Danhsachbaibao</Translate>
+                  </Label>
+                  <AvInput id="detai-danhsachbaibao" type="select" className="form-control" name="danhsachbaibaoId">
+                    <option value="" key="0" />
+                    {danhsachbaibaos
+                      ? danhsachbaibaos.map(otherEntity => (
                           <option value={otherEntity.id} key={otherEntity.id}>
                             {otherEntity.id}
                           </option>
@@ -305,6 +342,7 @@ export class DetaiUpdate extends React.Component<IDetaiUpdateProps, IDetaiUpdate
 const mapStateToProps = (storeState: IRootState) => ({
   dutoanKPS: storeState.dutoanKP.entities,
   danhgias: storeState.danhgia.entities,
+  danhsachbaibaos: storeState.danhsachbaibao.entities,
   linhvucs: storeState.linhvuc.entities,
   capdetais: storeState.capdetai.entities,
   hoidongdanhgias: storeState.hoidongdanhgia.entities,
@@ -318,6 +356,7 @@ const mapStateToProps = (storeState: IRootState) => ({
 const mapDispatchToProps = {
   getDutoanKps,
   getDanhgias,
+  getDanhsachbaibaos,
   getLinhvucs,
   getCapdetais,
   getHoidongdanhgias,

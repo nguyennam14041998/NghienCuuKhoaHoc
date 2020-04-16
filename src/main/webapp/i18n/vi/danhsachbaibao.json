@@ -1,0 +1,39 @@
+{
+  "nghienCuuKhoaHocApp": {
+    "danhsachbaibao": {
+      "home": {
+        "title": "Danhsachbaibaos",
+        "createLabel": "Thêm mới một Danhsachbaibao",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danhsachbaibao",
+        "notFound": "No Danhsachbaibaos found"
+      },
+      "created": "Một Danhsachbaibao mới được tạo với định danh {{ param }}",
+      "updated": "Một Danhsachbaibao cập nhật với định danh {{ param }}",
+      "deleted": "Một Danhsachbaibao đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danhsachbaibao {{ id }}?"
+      },
+      "detail": {
+        "title": "Danhsachbaibao"
+      },
+      "tenbaibao": "Tenbaibao",
+      "phanloai": "Phanloai",
+      "tenhoithao": "Tenhoithao",
+      "namxuatban": "Namxuatban",
+      "thangxuatban": "Thangxuatban",
+      "danhmuc": "Danhmuc",
+      "iffff": "Iffff",
+      "hindex": "Hindex",
+      "xeploai": "Xeploai",
+      "rankbaibao": "Rankbaibao",
+      "volbaibao": "Volbaibao",
+      "sobaibao": "Sobaibao",
+      "ppbaibao": "Ppbaibao",
+      "link": "Link",
+      "ghichu": "Ghichu",
+      "tacgiachinh": "Tacgiachinh",
+      "tacgiakhac": "Tacgiakhac",
+      "detai": "Detai"
+    }
+  }
+}

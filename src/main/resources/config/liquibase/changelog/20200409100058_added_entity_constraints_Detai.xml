@@ -20,6 +20,12 @@
                                  referencedColumnNames="id"
                                  referencedTableName="danhgia"/>
 
+        <addForeignKeyConstraint baseColumnNames="danhsachbaibao_id"
+                                 baseTableName="detai"
+                                 constraintName="fk_detai_danhsachbaibao_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="danhsachbaibao"/>
+
         <addForeignKeyConstraint baseColumnNames="linhvuc_id"
                                  baseTableName="detai"
                                  constraintName="fk_detai_linhvuc_id"

@@ -60,6 +60,9 @@ public class Detai implements Serializable {
     @Column(name = "sudung")
     private Integer sudung;
 
+    @Column(name = "chunhiemdetai")
+    private String chunhiemdetai;
+
     @OneToOne
     @JoinColumn(unique = true)
     private DutoanKP dutoanKP;
@@ -67,6 +70,10 @@ public class Detai implements Serializable {
     @OneToOne
     @JoinColumn(unique = true)
     private Danhgia danhgia;
+
+    @OneToOne
+    @JoinColumn(unique = true)
+    private Danhsachbaibao danhsachbaibao;
 
     @OneToMany(mappedBy = "detai")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
@@ -269,6 +276,19 @@ public class Detai implements Serializable {
         this.sudung = sudung;
     }
 
+    public String getChunhiemdetai() {
+        return chunhiemdetai;
+    }
+
+    public Detai chunhiemdetai(String chunhiemdetai) {
+        this.chunhiemdetai = chunhiemdetai;
+        return this;
+    }
+
+    public void setChunhiemdetai(String chunhiemdetai) {
+        this.chunhiemdetai = chunhiemdetai;
+    }
+
     public DutoanKP getDutoanKP() {
         return dutoanKP;
     }
@@ -293,6 +313,19 @@ public class Detai implements Serializable {
 
     public void setDanhgia(Danhgia danhgia) {
         this.danhgia = danhgia;
+    }
+
+    public Danhsachbaibao getDanhsachbaibao() {
+        return danhsachbaibao;
+    }
+
+    public Detai danhsachbaibao(Danhsachbaibao danhsachbaibao) {
+        this.danhsachbaibao = danhsachbaibao;
+        return this;
+    }
+
+    public void setDanhsachbaibao(Danhsachbaibao danhsachbaibao) {
+        this.danhsachbaibao = danhsachbaibao;
     }
 
     public Set<Tiendo> getTiendos() {
@@ -505,6 +538,7 @@ public class Detai implements Serializable {
             ", xeploai=" + getXeploai() +
             ", trangthai=" + getTrangthai() +
             ", sudung=" + getSudung() +
+            ", chunhiemdetai='" + getChunhiemdetai() + "'" +
             "}";
     }
 }

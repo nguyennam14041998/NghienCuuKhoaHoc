@@ -34,10 +34,14 @@ public class DetaiDTO implements Serializable {
 
     private Integer sudung;
 
+    private String chunhiemdetai;
+
 
     private Long dutoanKPId;
 
     private Long danhgiaId;
+
+    private Long danhsachbaibaoId;
 
     private Long linhvucId;
 
@@ -151,6 +155,14 @@ public class DetaiDTO implements Serializable {
         this.sudung = sudung;
     }
 
+    public String getChunhiemdetai() {
+        return chunhiemdetai;
+    }
+
+    public void setChunhiemdetai(String chunhiemdetai) {
+        this.chunhiemdetai = chunhiemdetai;
+    }
+
     public Long getDutoanKPId() {
         return dutoanKPId;
     }
@@ -165,6 +177,14 @@ public class DetaiDTO implements Serializable {
 
     public void setDanhgiaId(Long danhgiaId) {
         this.danhgiaId = danhgiaId;
+    }
+
+    public Long getDanhsachbaibaoId() {
+        return danhsachbaibaoId;
+    }
+
+    public void setDanhsachbaibaoId(Long danhsachbaibaoId) {
+        this.danhsachbaibaoId = danhsachbaibaoId;
     }
 
     public Long getLinhvucId() {
@@ -236,8 +256,10 @@ public class DetaiDTO implements Serializable {
             ", xeploai=" + getXeploai() +
             ", trangthai=" + getTrangthai() +
             ", sudung=" + getSudung() +
+            ", chunhiemdetai='" + getChunhiemdetai() + "'" +
             ", dutoanKP=" + getDutoanKPId() +
             ", danhgia=" + getDanhgiaId() +
+            ", danhsachbaibao=" + getDanhsachbaibaoId() +
             ", linhvuc=" + getLinhvucId() +
             ", capdetai=" + getCapdetaiId() +
             ", hoidongdanhgia=" + getHoidongdanhgiaId() +

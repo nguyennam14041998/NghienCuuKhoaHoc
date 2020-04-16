@@ -86,6 +86,7 @@ public class CacheConfiguration {
             createCache(cm, com.api.doan.domain.Hoidongdanhgia.class.getName() + ".thanhvienHDS");
             createCache(cm, com.api.doan.domain.ThanhvienHD.class.getName());
             createCache(cm, com.api.doan.domain.Upfile.class.getName());
+            createCache(cm, com.api.doan.domain.Danhsachbaibao.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

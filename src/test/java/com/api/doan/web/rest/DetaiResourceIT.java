@@ -4,6 +4,7 @@ import com.api.doan.NghienCuuKhoaHocApp;
 import com.api.doan.domain.Detai;
 import com.api.doan.domain.DutoanKP;
 import com.api.doan.domain.Danhgia;
+import com.api.doan.domain.Danhsachbaibao;
 import com.api.doan.domain.Tiendo;
 import com.api.doan.domain.Upfile;
 import com.api.doan.domain.Nhansuthamgia;
@@ -94,6 +95,9 @@ public class DetaiResourceIT {
     private static final Integer UPDATED_SUDUNG = 2;
     private static final Integer SMALLER_SUDUNG = 1 - 1;
 
+    private static final String DEFAULT_CHUNHIEMDETAI = "AAAAAAAAAA";
+    private static final String UPDATED_CHUNHIEMDETAI = "BBBBBBBBBB";
+
     @Autowired
     private DetaiRepository detaiRepository;
 
@@ -156,7 +160,8 @@ public class DetaiResourceIT {
             .ketqua(DEFAULT_KETQUA)
             .xeploai(DEFAULT_XEPLOAI)
             .trangthai(DEFAULT_TRANGTHAI)
-            .sudung(DEFAULT_SUDUNG);
+            .sudung(DEFAULT_SUDUNG)
+            .chunhiemdetai(DEFAULT_CHUNHIEMDETAI);
         return detai;
     }
     /**
@@ -178,7 +183,8 @@ public class DetaiResourceIT {
             .ketqua(UPDATED_KETQUA)
             .xeploai(UPDATED_XEPLOAI)
             .trangthai(UPDATED_TRANGTHAI)
-            .sudung(UPDATED_SUDUNG);
+            .sudung(UPDATED_SUDUNG)
+            .chunhiemdetai(UPDATED_CHUNHIEMDETAI);
         return detai;
     }
 
@@ -215,6 +221,7 @@ public class DetaiResourceIT {
         assertThat(testDetai.getXeploai()).isEqualTo(DEFAULT_XEPLOAI);
         assertThat(testDetai.getTrangthai()).isEqualTo(DEFAULT_TRANGTHAI);
         assertThat(testDetai.getSudung()).isEqualTo(DEFAULT_SUDUNG);
+        assertThat(testDetai.getChunhiemdetai()).isEqualTo(DEFAULT_CHUNHIEMDETAI);
     }
 
     @Test
@@ -260,7 +267,8 @@ public class DetaiResourceIT {
             .andExpect(jsonPath("$.[*].ketqua").value(hasItem(DEFAULT_KETQUA)))
             .andExpect(jsonPath("$.[*].xeploai").value(hasItem(DEFAULT_XEPLOAI)))
             .andExpect(jsonPath("$.[*].trangthai").value(hasItem(DEFAULT_TRANGTHAI)))
-            .andExpect(jsonPath("$.[*].sudung").value(hasItem(DEFAULT_SUDUNG)));
+            .andExpect(jsonPath("$.[*].sudung").value(hasItem(DEFAULT_SUDUNG)))
+            .andExpect(jsonPath("$.[*].chunhiemdetai").value(hasItem(DEFAULT_CHUNHIEMDETAI)));
     }
     
     @Test
@@ -285,7 +293,8 @@ public class DetaiResourceIT {
             .andExpect(jsonPath("$.ketqua").value(DEFAULT_KETQUA))
             .andExpect(jsonPath("$.xeploai").value(DEFAULT_XEPLOAI))
             .andExpect(jsonPath("$.trangthai").value(DEFAULT_TRANGTHAI))
-            .andExpect(jsonPath("$.sudung").value(DEFAULT_SUDUNG));
+            .andExpect(jsonPath("$.sudung").value(DEFAULT_SUDUNG))
+            .andExpect(jsonPath("$.chunhiemdetai").value(DEFAULT_CHUNHIEMDETAI));
     }
 
 
@@ -1435,6 +1444,84 @@ public class DetaiResourceIT {
 
     @Test
     @Transactional
+    public void getAllDetaisByChunhiemdetaiIsEqualToSomething() throws Exception {
+        // Initialize the database
+        detaiRepository.saveAndFlush(detai);
+
+        // Get all the detaiList where chunhiemdetai equals to DEFAULT_CHUNHIEMDETAI
+        defaultDetaiShouldBeFound("chunhiemdetai.equals=" + DEFAULT_CHUNHIEMDETAI);
+
+        // Get all the detaiList where chunhiemdetai equals to UPDATED_CHUNHIEMDETAI
+        defaultDetaiShouldNotBeFound("chunhiemdetai.equals=" + UPDATED_CHUNHIEMDETAI);
+    }
+
+    @Test
+    @Transactional
+    public void getAllDetaisByChunhiemdetaiIsNotEqualToSomething() throws Exception {
+        // Initialize the database
+        detaiRepository.saveAndFlush(detai);
+
+        // Get all the detaiList where chunhiemdetai not equals to DEFAULT_CHUNHIEMDETAI
+        defaultDetaiShouldNotBeFound("chunhiemdetai.notEquals=" + DEFAULT_CHUNHIEMDETAI);
+
+        // Get all the detaiList where chunhiemdetai not equals to UPDATED_CHUNHIEMDETAI
+        defaultDetaiShouldBeFound("chunhiemdetai.notEquals=" + UPDATED_CHUNHIEMDETAI);
+    }
+
+    @Test
+    @Transactional
+    public void getAllDetaisByChunhiemdetaiIsInShouldWork() throws Exception {
+        // Initialize the database
+        detaiRepository.saveAndFlush(detai);
+
+        // Get all the detaiList where chunhiemdetai in DEFAULT_CHUNHIEMDETAI or UPDATED_CHUNHIEMDETAI
+        defaultDetaiShouldBeFound("chunhiemdetai.in=" + DEFAULT_CHUNHIEMDETAI + "," + UPDATED_CHUNHIEMDETAI);
+
+        // Get all the detaiList where chunhiemdetai equals to UPDATED_CHUNHIEMDETAI
+        defaultDetaiShouldNotBeFound("chunhiemdetai.in=" + UPDATED_CHUNHIEMDETAI);
+    }
+
+    @Test
+    @Transactional
+    public void getAllDetaisByChunhiemdetaiIsNullOrNotNull() throws Exception {
+        // Initialize the database
+        detaiRepository.saveAndFlush(detai);
+
+        // Get all the detaiList where chunhiemdetai is not null
+        defaultDetaiShouldBeFound("chunhiemdetai.specified=true");
+
+        // Get all the detaiList where chunhiemdetai is null
+        defaultDetaiShouldNotBeFound("chunhiemdetai.specified=false");
+    }
+                @Test
+    @Transactional
+    public void getAllDetaisByChunhiemdetaiContainsSomething() throws Exception {
+        // Initialize the database
+        detaiRepository.saveAndFlush(detai);
+
+        // Get all the detaiList where chunhiemdetai contains DEFAULT_CHUNHIEMDETAI
+        defaultDetaiShouldBeFound("chunhiemdetai.contains=" + DEFAULT_CHUNHIEMDETAI);
+
+        // Get all the detaiList where chunhiemdetai contains UPDATED_CHUNHIEMDETAI
+        defaultDetaiShouldNotBeFound("chunhiemdetai.contains=" + UPDATED_CHUNHIEMDETAI);
+    }
+
+    @Test
+    @Transactional
+    public void getAllDetaisByChunhiemdetaiNotContainsSomething() throws Exception {
+        // Initialize the database
+        detaiRepository.saveAndFlush(detai);
+
+        // Get all the detaiList where chunhiemdetai does not contain DEFAULT_CHUNHIEMDETAI
+        defaultDetaiShouldNotBeFound("chunhiemdetai.doesNotContain=" + DEFAULT_CHUNHIEMDETAI);
+
+        // Get all the detaiList where chunhiemdetai does not contain UPDATED_CHUNHIEMDETAI
+        defaultDetaiShouldBeFound("chunhiemdetai.doesNotContain=" + UPDATED_CHUNHIEMDETAI);
+    }
+
+
+    @Test
+    @Transactional
     public void getAllDetaisByDutoanKPIsEqualToSomething() throws Exception {
         // Initialize the database
         detaiRepository.saveAndFlush(detai);
@@ -1470,6 +1557,26 @@ public class DetaiResourceIT {
 
         // Get all the detaiList where danhgia equals to danhgiaId + 1
         defaultDetaiShouldNotBeFound("danhgiaId.equals=" + (danhgiaId + 1));
+    }
+
+
+    @Test
+    @Transactional
+    public void getAllDetaisByDanhsachbaibaoIsEqualToSomething() throws Exception {
+        // Initialize the database
+        detaiRepository.saveAndFlush(detai);
+        Danhsachbaibao danhsachbaibao = DanhsachbaibaoResourceIT.createEntity(em);
+        em.persist(danhsachbaibao);
+        em.flush();
+        detai.setDanhsachbaibao(danhsachbaibao);
+        detaiRepository.saveAndFlush(detai);
+        Long danhsachbaibaoId = danhsachbaibao.getId();
+
+        // Get all the detaiList where danhsachbaibao equals to danhsachbaibaoId
+        defaultDetaiShouldBeFound("danhsachbaibaoId.equals=" + danhsachbaibaoId);
+
+        // Get all the detaiList where danhsachbaibao equals to danhsachbaibaoId + 1
+        defaultDetaiShouldNotBeFound("danhsachbaibaoId.equals=" + (danhsachbaibaoId + 1));
     }
 
 
@@ -1671,7 +1778,8 @@ public class DetaiResourceIT {
             .andExpect(jsonPath("$.[*].ketqua").value(hasItem(DEFAULT_KETQUA)))
             .andExpect(jsonPath("$.[*].xeploai").value(hasItem(DEFAULT_XEPLOAI)))
             .andExpect(jsonPath("$.[*].trangthai").value(hasItem(DEFAULT_TRANGTHAI)))
-            .andExpect(jsonPath("$.[*].sudung").value(hasItem(DEFAULT_SUDUNG)));
+            .andExpect(jsonPath("$.[*].sudung").value(hasItem(DEFAULT_SUDUNG)))
+            .andExpect(jsonPath("$.[*].chunhiemdetai").value(hasItem(DEFAULT_CHUNHIEMDETAI)));
 
         // Check, that the count call also returns 1
         restDetaiMockMvc.perform(get("/api/detais/count?sort=id,desc&" + filter))
@@ -1730,7 +1838,8 @@ public class DetaiResourceIT {
             .ketqua(UPDATED_KETQUA)
             .xeploai(UPDATED_XEPLOAI)
             .trangthai(UPDATED_TRANGTHAI)
-            .sudung(UPDATED_SUDUNG);
+            .sudung(UPDATED_SUDUNG)
+            .chunhiemdetai(UPDATED_CHUNHIEMDETAI);
         DetaiDTO detaiDTO = detaiMapper.toDto(updatedDetai);
 
         restDetaiMockMvc.perform(put("/api/detais")
@@ -1754,6 +1863,7 @@ public class DetaiResourceIT {
         assertThat(testDetai.getXeploai()).isEqualTo(UPDATED_XEPLOAI);
         assertThat(testDetai.getTrangthai()).isEqualTo(UPDATED_TRANGTHAI);
         assertThat(testDetai.getSudung()).isEqualTo(UPDATED_SUDUNG);
+        assertThat(testDetai.getChunhiemdetai()).isEqualTo(UPDATED_CHUNHIEMDETAI);
     }
 
     @Test

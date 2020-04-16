@@ -8,11 +8,12 @@ import org.mapstruct.*;
 /**
  * Mapper for the entity {@link Detai} and its DTO {@link DetaiDTO}.
  */
-@Mapper(componentModel = "spring", uses = {DutoanKPMapper.class, DanhgiaMapper.class, LinhvucMapper.class, CapdetaiMapper.class, HoidongdanhgiaMapper.class, ChunhiemMapper.class})
+@Mapper(componentModel = "spring", uses = {DutoanKPMapper.class, DanhgiaMapper.class, DanhsachbaibaoMapper.class, LinhvucMapper.class, CapdetaiMapper.class, HoidongdanhgiaMapper.class, ChunhiemMapper.class})
 public interface DetaiMapper extends EntityMapper<DetaiDTO, Detai> {
 
     @Mapping(source = "dutoanKP.id", target = "dutoanKPId")
     @Mapping(source = "danhgia.id", target = "danhgiaId")
+    @Mapping(source = "danhsachbaibao.id", target = "danhsachbaibaoId")
     @Mapping(source = "linhvuc.id", target = "linhvucId")
     @Mapping(source = "capdetai.id", target = "capdetaiId")
     @Mapping(source = "hoidongdanhgia.id", target = "hoidongdanhgiaId")
@@ -21,6 +22,7 @@ public interface DetaiMapper extends EntityMapper<DetaiDTO, Detai> {
 
     @Mapping(source = "dutoanKPId", target = "dutoanKP")
     @Mapping(source = "danhgiaId", target = "danhgia")
+    @Mapping(source = "danhsachbaibaoId", target = "danhsachbaibao")
     @Mapping(target = "tiendos", ignore = true)
     @Mapping(target = "removeTiendo", ignore = true)
     @Mapping(target = "upfiles", ignore = true)
